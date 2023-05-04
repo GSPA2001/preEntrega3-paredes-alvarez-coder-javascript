@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* estilos generico*/
+body{
+    background-color: #f0f8ff;
+    font-family:'Roboto', sans-serif;
+}
+/*estilo de header*/
+header{
+    background-color: #c3dff7;
+    text-align: center;
+    padding: 10px;
+}
+header nav ul{
+    list-style: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+/* estilo de elementos*/
+h1{
+    color: #1b1c1a;
+    font-family: cursive;   
+} 
+
+h2{
+    color: #1b1c1a;
+    font-family: cursive;
+}
+
+/*estilos de main*/
+/*main de index*/
+main{
+    text-align: center;
+    padding: 40px;
+}
+
+main .contenedorUno .titulo{
+    position: absolute;
+    left: 20%;
+    padding: 5px;
+}
+
+main .contenedorDos img{
+    width: 100%;
+}
+
+main section p{
+    margin-bottom: 35px;
+}
+
+/* main de contacto*/
+main .contenedorTres a img{
+    width: 8%;
+}
+
+ul{
+    text-align: center;
+    list-style: none;
+}
+
+main .contenedorCuatro a img{
+    width: 10%;
+}
+
+/*main de carta*/
+main .carousel-item{
+    text-align: center;
+}
+main .cuadro-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 1px solid black;
+    z-index: 100;
+}
+.oculto {
+    display: none;
+}
+  
+/*animacion*/
+main .carousel-item{
+    animation-name: ani_portada;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+@keyframes ani_portada {
+    0%{
+        transform: scale(1);
+        opacity: 100%;
+    }
+    15%{
+        transform: scale(1.2);
+        opacity: 75%;
+    }
+    25%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+        opacity: 80%;
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* estilos de footer*/
+footer{
+    background-color: rgba(255, 92, 92, 0.757);
+    text-align: center;
+    margin-top: 40px;
+}
+footer a img{
+    width: 5%;
+}
+
+footer div{
+    background-color: #f0f8ff;
+}
+
+/* Media queries*/
+/* MQ celular*/
+@media only screen and (max-width: 400px) {
+    main p{
+        color: goldenrod;
+    }
+    main .col{
+        padding: 5px;
+    }
+}
+
+/*MQ tablet*/
+@media only screen and (min-width:570px) and (max-width: 1224px) {
+    main .col{
+        padding: 10px;
+        display: grid;
+        grid-template-rows: repeat(1, 3fr) ;
+        grid-template-columns: repeat(1, 3fr) ;
+   }
+}
+
+/*MQ desktop*/
+@media only screen and (min-width: 1225px) and (max-width:1600px){
+    main .col{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    main p{
+        color: goldenrod;
+        font-family: bold;
+    }
+}
